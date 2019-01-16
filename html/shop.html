@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title %}店铺:{{shop.name}} - 饱了么{% endblock %}
+{% block title %}店铺:{{shop.name}} - 洽柠檬{% endblock %}
 
 {% block body %}
 <script>
@@ -50,7 +50,7 @@ $(document).ready(function(){
 <div class="row row-offcanvas row-offcanvas-right">
   <div class="col-xs-12 col-sm-12">
     <div class="jumbotron">
-      <h4>欢迎使用饱了么网上订餐系统</h4>
+      <h4>欢迎使用洽柠檬网上订餐系统</h4>
       <h3>当前正在浏览店铺：<strong>{{shop.name}}</strong></h3>
       <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--“{{shop.announcement}}”</h4>
       <h4>营业状态:{{shop.status}}&nbsp;&nbsp;&nbsp;店铺类型:{{shop.shoptype}}</h4>

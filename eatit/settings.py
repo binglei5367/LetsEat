@@ -66,20 +66,20 @@ from .passwd import (
 )
 DATABASES = {
     # 使用sqlite3
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#}
 
     # 使用MySQL数据库
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'letseat',
-    #     'USER': MYSQL_USER,
-    #     'PASSWORD': MYSQL_PASS,
-    #     'HOST': 'localhost',
-    #     'PORT': '3306',
-    # }
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'letseat',
+         'USER': MYSQL_USER,
+         'PASSWORD': MYSQL_PASS,
+         'HOST': 'localhost',
+         'PORT': '3306',
+     }
 }
 
 # Internationalization

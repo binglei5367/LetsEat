@@ -12,23 +12,26 @@ class CuisineInline(admin.StackedInline):
     extra = 1
 
 
-@admin.register(ShopKeeperModel)
+#@admin.register(ShopKeeperModel)
 class ShopKeeperModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'phone', 'shop')
     search_fields = ('name', 'phone')
+admin.site.register(ShopKeeperModel, ShopKeeperModelAdmin)
 
 
-@admin.register(ShopModel)
+#@admin.register(ShopModel)
 class ShopModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'shoptype', 'miniprice', 'status', 'announcement')
     search_fields = ('name', 'shoptype', 'miniprice', 'status')
     list_filter = ('address', )
 
     inlines = [ShopKeeperInline, CuisineInline]
+admin.site.register(ShopModel, ShopModelAdmin)
 
 
-@admin.register(CuisineModel)
+#@admin.register(CuisineModel)
 class CuisineModelAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'grade', 'salesvolume', 'shop')
     search_fields = ('name',)
     list_filter = ('shop',)
+admin.site.register(CuisineModel, CuisineModelAdmin)
